@@ -1,51 +1,72 @@
+:root {
+  color: #542634;
+  background: #f6eee4;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
-    flex-direction: column;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 13% 18%, rgba(181, 102, 111, 0.16) 0 1px, transparent 2px),
+    radial-gradient(circle at 87% 82%, rgba(181, 102, 111, 0.14) 0 1px, transparent 2px),
+    #f6eee4;
+  background-size: 24px 24px, 31px 31px, auto;
+}
+
+.anniversary-card {
+  width: min(42rem, calc(100% - 3rem));
+  padding: clamp(3rem, 9vw, 6rem) clamp(1.75rem, 7vw, 5rem);
+  text-align: center;
+  border: 1px solid rgba(119, 48, 66, 0.26);
+  background: rgba(255, 251, 245, 0.72);
+  box-shadow: 0 1.25rem 3.5rem rgba(82, 38, 52, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 1.35rem;
+  color: #9b5062;
+  font-family: Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #6b2b40;
+  font-size: clamp(3.1rem, 10vw, 6.2rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.91;
+}
+
+.flourish {
+  margin: 2rem 0 1.6rem;
+  color: #b5666f;
+  font-size: 1.25rem;
+}
+
+.message {
+  max-width: 28rem;
+  margin: 0 auto;
+  color: #714153;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 420px) {
+  .anniversary-card {
+    width: calc(100% - 2rem);
+    padding-block: 3.25rem;
   }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    color: #d32f2f;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .yes-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .no-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .gif_container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
+}
