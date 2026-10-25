@@ -31,6 +31,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   
   .no-button {
@@ -41,6 +44,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   
   .gif_container img {
