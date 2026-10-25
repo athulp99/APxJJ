@@ -1,18 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary, Jeny</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.9em' font-size='58'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Timeline | Jeny</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.9em' font-size='58'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="anniversary-card">
-        <p class="eyebrow">For you, always</p>
-        <h1>Happy Anniversary,<br>Jeny</h1>
+  <main class="journey">
+    <section class="timeline-shell" aria-label="Relationship timeline from August 2025 to November 2026" tabindex="0">
+      <div class="timeline-canvas">
+        <aside class="intro" aria-label="Timeline introduction">
+          <div class="memory-card intro-card">
+            <p class="eyebrow">A little journey</p>
+            <h1>Our timeline</h1>
+            <div class="intro-arrow" aria-hidden="true">&rarr;</div>
+          </div>
+        </aside>
+        <div class="main-line" aria-hidden="true"></div>
+        <div id="timeline-items"></div>
+      </div>
+    </section>
+    <p class="current-month" id="current-month" aria-live="polite">August 2025</p>
+    <aside class="finale" aria-label="Final anniversary message" aria-hidden="true">
+      <div class="memory-card final-card">
+        <p class="eyebrow">The next chapter</p>
+        <h2>Happy Anniversary,<br>Jeny</h2>
         <div class="flourish" aria-hidden="true">✦</div>
-        <p class="message">Here&rsquo;s to another year of laughter, little moments, and every beautiful memory still waiting for us.</p>
-    </main>
+        <p>Here&rsquo;s to another year of laughter, little moments, and every beautiful memory still waiting for us.</p>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
