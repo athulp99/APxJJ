@@ -2,37 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Timeline | Jeny</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.9em' font-size='58'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#cad9e3">
+  <title>For Jeny · Our keepsake box</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.9em' font-size='54'%3E💌%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=0.5">
 </head>
 <body>
-  <main class="journey">
-    <section class="timeline-shell" aria-label="Relationship timeline from August 2025 to November 2026" tabindex="0">
-      <div class="timeline-canvas">
-        <aside class="intro" aria-label="Timeline introduction">
-          <div class="memory-card intro-card">
-            <p class="eyebrow">A little journey</p>
-            <h1>Our timeline</h1>
-            <div class="intro-arrow" aria-hidden="true">&rarr;</div>
+  <main class="desk">
+    <header class="mast"><span class="monogram">AP <i>♡</i> JJ</span><time datetime="2026-11-07">7 November 2026</time></header>
+    <section class="tabletop" aria-label="Jeny’s anniversary shoebox">
+      <div class="table-print" aria-hidden="true"><img src="assets/autumn-portrait.jpg" alt=""></div>
+      <div class="table-strip" aria-hidden="true"><img src="assets/fairgame-strip.jpg" alt=""></div>
+      <div class="box" id="box">
+        <div class="inside" id="keepsakes" hidden>
+          <header class="box-header"><h2>Things I kept for you</h2><button type="button" id="close-lid">Close lid</button></header>
+          <div class="objects">
+            <button class="object folded" data-object="fit" aria-label="Unfold the fit-check note">
+              <span class="pin" aria-hidden="true"></span><span>I did watch<br>them btw.</span><i aria-hidden="true">♡</i>
+            </button>
+            <button class="object snapshots" data-object="firsts" aria-label="Open the three first-date screenshots">
+              <img src="assets/first-date-snapchat.png" alt=""><span>Before we met</span>
+            </button>
+            <button class="object receipt" data-object="receipt" aria-label="Read the birthday receipt">
+              <strong>Krispy Kreme</strong><span class="receipt-rule">Birthday treats</span><i>Too Good To Go</i><span class="barcode" aria-hidden="true"></span>
+            </button>
+            <button class="object photo-pile" data-object="photos" aria-label="Browse the pile of 23 photos">
+              <span class="strip-peek" aria-hidden="true"></span><span class="pile-front"><img src="assets/winter-fair.jpg" alt=""><span>our photos</span></span>
+            </button>
+            <button class="object letters" data-object="letters" aria-label="Untie the little letters">
+              <span class="twine" aria-hidden="true"></span><span>Little<br>letters</span>
+            </button>
+            <button class="object envelope" data-object="anniversary" aria-label="Open the 7 November envelope">
+              <span class="envelope-flap" aria-hidden="true"></span><i class="seal" aria-hidden="true">♡</i><span class="address">7 November</span>
+            </button>
           </div>
-        </aside>
-        <div class="main-line" aria-hidden="true"></div>
-        <div id="timeline-items"></div>
+        </div>
+        <div class="lid">
+          <div class="ribbon" aria-hidden="true"></div>
+          <div class="lid-label">
+            <div class="duck-stamp" aria-hidden="true"></div>
+            <p>Happy Anniversary,</p>
+            <h1>Jeny</h1>
+            <button type="button" id="lift" aria-controls="keepsakes" aria-expanded="false">Lift the lid <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+        <div class="box-front" aria-hidden="true"><i></i></div>
       </div>
     </section>
-    <p class="current-month" id="current-month" aria-live="polite">August 2025</p>
-    <p class="site-version" aria-label="Site version">Anniversary 2026 · v0.3</p>
-    <aside class="finale" aria-label="Final anniversary message" aria-hidden="true">
-      <div class="memory-card final-card">
-        <p class="eyebrow">The next chapter</p>
-        <h2>Happy Anniversary,<br>Jeny</h2>
-        <div class="flourish" aria-hidden="true">✦</div>
-        <p>Here&rsquo;s to another year of laughter, little moments, and every beautiful memory still waiting for us.</p>
-      </div>
-    </aside>
+    <footer class="version">Anniversary 2026 · v0.5</footer>
   </main>
-  <script src="script.js"></script>
+  <dialog class="reader" aria-labelledby="reader-title">
+    <div class="reader-top"><h2 id="reader-title"></h2><button class="put-back" type="button">Put back <span aria-hidden="true">↩</span></button></div>
+    <div class="pages"></div>
+    <nav class="reader-controls" aria-label="Keepsake pages">
+      <button type="button" class="previous" aria-label="Previous page">←</button>
+      <output class="position"></output>
+      <button type="button" class="next" aria-label="Next page">→</button>
+    </nav>
+    <div class="contact-sheet" aria-label="Choose a print"></div>
+  </dialog>
+  <noscript>Turn on JavaScript to open Jeny’s keepsake box.</noscript>
+  <script type="module" src="script.js?v=0.5"></script>
 </body>
 </html>
